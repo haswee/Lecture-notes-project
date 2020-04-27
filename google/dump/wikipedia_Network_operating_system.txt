@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Network operating system - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XoBHZApAICMAABCvQw0AAABK","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Network_operating_system","wgTitle":"Network operating system","wgCurRevisionId":946463810,"wgRevisionId":946463810,"wgArticleId":41411,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: uses authors parameter","All articles with unsourced statements","Articles with unsourced statements from March 2019","Network operating systems","Operating systems","Internet Protocol based network software"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext",
+"wgRelevantPageName":"Network_operating_system","wgRelevantArticleId":41411,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q282080","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy"
+:"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Network_operating_system&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Network_operating_system&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Network_operating_system"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Network_operating_system rootpage-Network_operating_system skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Network operating system</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>A <b>network operating system</b> is a specialized <a href="/wiki/Operating_system" title="Operating system">operating system</a> for a network device such as a <a href="/wiki/Router_(computing)" title="Router (computing)">router</a>, <a href="/wiki/Network_switch" title="Network switch">switch</a> or <a href="/wiki/Firewall_(computing)" title="Firewall (computing)">firewall</a>.
+</p><p>Historically operating systems with networking capabilities were described as network operating system, because they allowed personal computers (PCs) to participate in <a href="/wiki/Computer_networks" class="mw-redirect" title="Computer networks">computer networks</a> and <a href="/wiki/Shared_file_access" class="mw-redirect" title="Shared file access">shared file and printer access</a> within a <a href="/wiki/Local_area_network" title="Local area network">local area network</a> (LAN). This description of operating systems is now largely historical, as common operating systems include a <a href="/wiki/Network_stack" class="mw-redirect" title="Network stack">network stack</a> to support a <a href="/wiki/Client%E2%80%93server_model" title="Client–server model">client–server model</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Network_device_operating_systems"><span class="tocnumber">2</span> <span class="toctext">Network device operating systems</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Proprietary_network_operating_systems"><span class="tocnumber">2.1</span> <span class="toctext">Proprietary network operating systems</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#NetBSD,_FreeBSD,_or_Linux_based_operating_systems"><span class="tocnumber">2.2</span> <span class="toctext">NetBSD, FreeBSD, or Linux based operating systems</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Network_operating_system&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Early microcomputer operating systems such as <a href="/wiki/CP/M" title="CP/M">CP/M</a>, <a href="/wiki/DOS" title="DOS">DOS</a> and <a href="/wiki/Classic_Mac_OS" title="Classic Mac OS">classic Mac OS</a> were designed for one user on one computer.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (March 2019)">citation needed</span></a></i>&#93;</sup> <a href="/wiki/Packet_switching" title="Packet switching">Packet switching</a> networks were developed to share hardware resources, such as a <a href="/wiki/Mainframe_computer" title="Mainframe computer">mainframe computer</a>, a <a href="/wiki/Printer_(computing)" title="Printer (computing)">printer</a> or a large and expensive <a href="/wiki/Hard_disk" class="mw-redirect" title="Hard disk">hard disk</a>.<sup id="cite_ref-Understanding_Operating_Systems_1-0" class="reference"><a href="#cite_note-Understanding_Operating_Systems-1">&#91;1&#93;</a></sup> As local area network technology became available, two general approaches to handle sharing of resources on networks arose.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (March 2019)">citation needed</span></a></i>&#93;</sup>
+</p><p>Historically a network operating system was an <a href="/wiki/Operating_system" title="Operating system">operating system</a> for a computer which implemented network capabilities. Operating systems with a <a href="/wiki/Network_stack" class="mw-redirect" title="Network stack">network stack</a> allowed <a href="/wiki/Personal_computers" class="mw-redirect" title="Personal computers">personal computers</a> to participate in a <a href="/wiki/Client%E2%80%93server_model" title="Client–server model">client-server architecture</a> in which a <a href="/wiki/Server_(computing)" title="Server (computing)">server</a> enables multiple clients to share resources, such as <a href="/wiki/Printer_(computing)" title="Printer (computing)">printers</a>.<sup id="cite_ref-autogenerated2_2-0" class="reference"><a href="#cite_note-autogenerated2-2">&#91;2&#93;</a></sup><sup id="cite_ref-autogenerated3_3-0" class="reference"><a href="#cite_note-autogenerated3-3">&#91;3&#93;</a></sup><sup id="cite_ref-:0_4-0" class="reference"><a href="#cite_note-:0-4">&#91;4&#93;</a></sup> Early examples of client-server operating systems that were shipped with fully integrated network capabilities are <a href="/wiki/Novell_NetWare" class="mw-redirect" title="Novell NetWare">Novell NetWare</a> using the <a href="/wiki/Internetwork_Packet_Exchange" title="Internetwork Packet Exchange">Internetwork Packet Exchange</a> (IPX) network protocol, <a href="/wiki/Windows_Server_2003" title="Windows Server 2003">Windows Server 2003</a>, and <a href="/wiki/Banyan_VINES" title="Banyan VINES">Banyan VINES</a> which used a variant of the <a href="/wiki/Xerox_Network_Systems" title="Xerox Network Systems">Xerox Network Systems</a> (XNS) protocols.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (March 2019)">citation needed</span></a></i>&#93;</sup>
+</p><p><a href="/wiki/Peer-to-peer" title="Peer-to-peer">Peer-to-peer</a> network operating systems were also developed, which used networking capabilities to share resources and files located on personal computers. This system is not based with having a file server or centralized management source. A peer-to-peer network sets all connected computers equal; they all share the same abilities to use resources available on the network.<sup id="cite_ref-autogenerated3_3-1" class="reference"><a href="#cite_note-autogenerated3-3">&#91;3&#93;</a></sup> Examples of early peer-to-peer operating systems with networking capabilities include <a href="/wiki/AppleShare" title="AppleShare">AppleShare</a> used for networking connecting Apple products, <a href="/wiki/LANtastic" title="LANtastic">LANtastic</a> supporting DOS, <a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a> and <a href="/wiki/OS/2" title="OS/2">OS/2</a> computers, as well as <a href="/wiki/Windows_for_Workgroups" class="mw-redirect" title="Windows for Workgroups">Windows for Workgroups</a> used for networking peer-to-peer Windows computers.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (March 2019)">citation needed</span></a></i>&#93;</sup>
+</p><p>Today, <a href="/wiki/Distributed_computing" title="Distributed computing">distributed computing</a> and <a href="/wiki/Groupware" class="mw-redirect" title="Groupware">groupware</a> applications have become the norm. Computer operating systems include a networking stack as a matter of course.<sup id="cite_ref-Understanding_Operating_Systems_1-1" class="reference"><a href="#cite_note-Understanding_Operating_Systems-1">&#91;1&#93;</a></sup> During the 1980s the need to integrate dissimilar computers with network capabilities grew and the number of networked devices grew rapidly. Partly because it allowed for multi-vendor <a href="/wiki/Interoperability" title="Interoperability">interoperability</a> the <a href="/wiki/TCP/IP" class="mw-redirect" title="TCP/IP">TCP/IP</a> protocol suite became almost universally adopted in network architectures. Therefore, computer operating systems and the <a href="/wiki/Firmware" title="Firmware">firmware</a> of network devices needed to reliably support the TCP/IP protocols.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Network_device_operating_systems">Network device operating systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Network_operating_system&amp;action=edit&amp;section=2" title="Edit section: Network device operating systems">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Network operating systems can be embedded in a <a href="/wiki/Router_(computing)" title="Router (computing)">router</a> or <a href="/wiki/Firewall_(computing)" title="Firewall (computing)">hardware firewall</a> that operates the functions in the <a href="/wiki/Network_layer" title="Network layer">network layer</a> (<a href="/wiki/OSI_model" title="OSI model">layer 3</a>).<sup id="cite_ref-expert_6-0" class="reference"><a href="#cite_note-expert-6">&#91;6&#93;</a></sup> Notable network operating systems include:
+</p>
+<h3><span class="mw-headline" id="Proprietary_network_operating_systems">Proprietary network operating systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Network_operating_system&amp;action=edit&amp;section=3" title="Edit section: Proprietary network operating systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/Cisco_IOS" title="Cisco IOS">Cisco IOS</a>, a family of network operating systems used on most <a href="/wiki/Cisco_Systems" title="Cisco Systems">Cisco Systems</a> <a href="/wiki/Router_(computing)" title="Router (computing)">routers</a> and current Cisco <a href="/wiki/Network_switch" title="Network switch">network switches</a>. Earlier switches ran the Catalyst Operating System <a href="/wiki/CatOS" class="mw-redirect" title="CatOS">CatOS</a></li>
+<li><a href="/wiki/MikroTik#RouterOS" title="MikroTik">RouterOS</a> by <a href="/wiki/MikroTik" title="MikroTik">MikroTik</a>.</li>
+<li><a href="/wiki/ZyNOS" title="ZyNOS">ZyNOS</a>, used in network devices made by <a href="/wiki/ZyXEL" class="mw-redirect" title="ZyXEL">ZyXEL</a>.</li></ul>
+<h3><span id="NetBSD.2C_FreeBSD.2C_or_Linux_based_operating_systems"></span><span class="mw-headline" id="NetBSD,_FreeBSD,_or_Linux_based_operating_systems">NetBSD, FreeBSD, or Linux based operating systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Network_operating_system&amp;action=edit&amp;section=4" title="Edit section: NetBSD, FreeBSD, or Linux based operating systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/DD-WRT" title="DD-WRT">DD-WRT</a>, Linux kernel based DD-WRT is Linux-based firmware for wireless routers and access points as well as low-cost networking device platforms such as the <a href="/wiki/Linksys" title="Linksys">Linksys</a> <a href="/wiki/Linksys_WRT54G_series" title="Linksys WRT54G series">WRT54G</a></li>
+<li><a href="/wiki/Dell_Networking_Operating_System" title="Dell Networking Operating System">Dell Networking Operating System</a>, DNOS9 is <a href="/wiki/NetBSD" title="NetBSD">NetBSD</a> based, while OS10 uses the <a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a>.</li>
+<li><a href="/wiki/Arista_Networks#Extensible_Operating_System" title="Arista Networks">Extensible Operating System</a> runs on switches from <a href="/wiki/Arista_Networks" title="Arista Networks">Arista</a> and uses an unmodified Linux kernel</li>
+<li><a href="/wiki/ExtremeXOS" title="ExtremeXOS">ExtremeXOS</a> (EXOS), used in network devices made by <a href="/wiki/Extreme_Networks" title="Extreme Networks">Extreme Networks</a></li>
+<li><a href="/wiki/FTOS" title="FTOS">FTOS</a> or Force10 Operating System, is the <a href="/wiki/Firmware" title="Firmware">firmware</a> family used on <a href="/wiki/Force10" title="Force10">Force10</a> Ethernet switches</li>
+<li><a href="/wiki/OpenWrt" title="OpenWrt">OpenWrt</a> used to route <a href="/wiki/Internet_Protocol" title="Internet Protocol">IP packets</a> on <a href="/wiki/Embedded_devices" class="mw-redirect" title="Embedded devices">embedded devices</a></li>
+<li><a href="/wiki/PfSense" title="PfSense">pfSense</a>, a fork of <a href="/wiki/M0n0wall" title="M0n0wall">M0n0wall</a>, uses <a href="/wiki/PF_(firewall)" title="PF (firewall)">PF</a></li>
+<li><a href="/wiki/Cumulus_Networks#Products" title="Cumulus Networks">Cumulus Linux</a> distribution, which uses the full TCP/IP stack of <a href="/wiki/Linux" title="Linux">Linux</a>.</li>
+<li><a href="/wiki/VyOS" title="VyOS">VyOS</a>, an open source fork of the Vyatta routing package</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Network_operating_system&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Distributed_operating_system" title="Distributed operating system">Distributed operating system</a></li>
+<li><a href="/wiki/FRRouting" title="FRRouting">FRRouting</a></li>
+<li><a href="/wiki/Network_Computer_Operating_System" class="mw-redirect" title="Network Computer Operating System">Network Computer Operating System</a></li>
+<li><a href="/wiki/Network_functions_virtualization" class="mw-redirect" title="Network functions virtualization">Network functions virtualization</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Network_operating_system&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-Understanding_Operating_Systems-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-Understanding_Operating_Systems_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Understanding_Operating_Systems_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Ann McHoes &amp; Ida M. Flynn (2012). <i>Understanding Operating Systems</i> (6 ed.). cengage Learning. p.&#160;318. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781133417569" title="Special:BookSources/9781133417569"><bdi>9781133417569</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Understanding+Operating+Systems&amp;rft.pages=318&amp;rft.edition=6&amp;rft.pub=cengage+Learning&amp;rft.date=2012&amp;rft.isbn=9781133417569&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANetwork+operating+system" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: uses authors parameter (<a href="/wiki/Category:CS1_maint:_uses_authors_parameter" title="Category:CS1 maint: uses authors parameter">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-autogenerated2-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-autogenerated2_2-0">^</a></b></span> <span class="reference-text">Dean, Tamara (2009). "Network Operating Systems", <i>Network+ Guide to Networks</i>, 421(483)</span>
+</li>
+<li id="cite_note-autogenerated3-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-autogenerated3_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-autogenerated3_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Winkelman, Dr. Roy (2009). "Chapter 6: Software", <i>An Educator's Guide to School Networks</i>, 6.</span>
+</li>
+<li id="cite_note-:0-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-:0_4-0">^</a></b></span> <span class="reference-text">Davis, Ziff (2011). "network operating system", <i>PCmag.com</i>Retrieved 5/7/2011.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation book">Ann McHoes &amp; Ida M. Flynn (2012). <i>Understanding Operating Systems</i> (6 ed.). cengage Learning. p.&#160;305. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781133417569" title="Special:BookSources/9781133417569"><bdi>9781133417569</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Understanding+Operating+Systems&amp;rft.pages=305&amp;rft.edition=6&amp;rft.pub=cengage+Learning&amp;rft.date=2012&amp;rft.isbn=9781133417569&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANetwork+operating+system" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: uses authors parameter (<a href="/wiki/Category:CS1_maint:_uses_authors_parameter" title="Category:CS1 maint: uses authors parameter">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-expert-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-expert_6-0">^</a></b></span> <span class="reference-text">Al-Shawakfa, Emad; Evens, Martha (2001). "The Dialoguer: An Interactive Bilingual Interface to a Network Operating System.", <i>Expert Systems</i> Vol. 18 Issue 3, p131, 19p, Retrieved 5/7/2011.</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Network_operating_system&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://www.pcmag.com/encyclopedia_term/0,2542,t=network+operating+system&amp;i=47901,00.asp">PCmag's definition of network operating system</a></li>
+<li><a rel="nofollow" class="external text" href="http://fcit.usf.edu/network/chap6/chap6.htm">Chapter 6 of Dr. Roy Winkelman's guide to networks</a></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1375
+Cached time: 20200320093152
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.192 seconds
+Real time usage: 0.260 seconds
+Preprocessor visited node count: 787/1000000
+Post‐expand include size: 10920/2097152 bytes
+Template argument size: 1968/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 8253/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.106/10.000 seconds
+Lua memory usage: 2.14 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  239.065      1 -total
+ 50.78%  121.409      1 Template:Reflist
+ 46.18%  110.412      4 Template:Citation_needed
+ 43.61%  104.252      2 Template:Cite_book
+ 33.10%   79.137      4 Template:Fix
+ 19.95%   47.688      8 Template:Category_handler
+ 11.03%   26.373      4 Template:Delink
+  2.97%    7.097      4 Template:Fix/category
+  1.00%    2.388      1 Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:41411-0!canonical and timestamp 20200320093152 and revision id 946463810
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Network_operating_system&amp;oldid=946463810">https://en.wikipedia.org/w/index.php?title=Network_operating_system&amp;oldid=946463810</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Network_operating_systems" title="Category:Network operating systems">Network operating systems</a></li><li><a href="/wiki/Category:Operating_systems" title="Category:Operating systems">Operating systems</a></li><li><a href="/wiki/Category:Internet_Protocol_based_network_software" title="Category:Internet Protocol based network software">Internet Protocol based network software</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_uses_authors_parameter" title="Category:CS1 maint: uses authors parameter">CS1 maint: uses authors parameter</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_March_2019" title="Category:Articles with unsourced statements from March 2019">Articles with unsourced statements from March 2019</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Network+operating+system" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Network+operating+system" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Network_operating_system" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Network_operating_system" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Network_operating_system">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Network_operating_system&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Network_operating_system&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Network_operating_system" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Network_operating_system" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Network_operating_system&amp;oldid=946463810" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Network_operating_system&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q282080" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Network_operating_system&amp;id=946463810&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Network+operating+system">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Network+operating+system&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Network_operating_system&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%86%D8%B8%D8%A7%D9%85_%D8%A7%D9%84%D8%AA%D8%B4%D8%BA%D9%8A%D9%84_%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D9%8A" title="نظام التشغيل الشبكي – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/%C5%9E%C9%99b%C9%99k%C9%99_%C9%99m%C9%99liyyat_sistemi" title="Şəbəkə əməliyyat sistemi – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Sistema_operatiu_de_xarxa" title="Sistema operatiu de xarxa – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/S%C3%AD%C5%A5ov%C3%BD_opera%C4%8Dn%C3%AD_syst%C3%A9m" title="Síťový operační systém – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Netzwerkbetriebssystem" title="Netzwerkbetriebssystem – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Sistema_operativo_de_red" title="Sistema operativo de red – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85%E2%80%8C%D8%B9%D8%A7%D9%85%D9%84_%D8%B4%D8%A8%DA%A9%D9%87" title="سیستم‌عامل شبکه – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC_%EC%9A%B4%EC%98%81_%EC%B2%B4%EC%A0%9C" title="네트워크 운영 체제 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Sistem_operasi_jaringan" title="Sistem operasi jaringan – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Network_Operating_System" title="Network Operating System – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/H%C3%A1l%C3%B3zati_oper%C3%A1ci%C3%B3s_rendszer" title="Hálózati operációs rendszer – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/%D0%A1%D2%AF%D0%BB%D0%B6%D1%8D%D1%8D%D0%BD%D0%B8%D0%B9_%D2%AF%D0%B9%D0%BB%D0%B4%D0%BB%D0%B8%D0%B9%D0%BD_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC" title="Сүлжээний үйлдлийн систем – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Netwerkbesturingssysteem" title="Netwerkbesturingssysteem – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="ネットワークオペレーティングシステム – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Nettverksoperativsystem" title="Nettverksoperativsystem – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Sieciowy_system_operacyjny" title="Sieciowy system operacyjny – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%82%D0%B5%D0%B2%D0%B0%D1%8F_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0" title="Сетевая операционная система – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Verkkok%C3%A4ytt%C3%B6j%C3%A4rjestelm%C3%A4" title="Verkkokäyttöjärjestelmä – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Network_operating_system" title="Network operating system – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/A%C4%9F_i%C5%9Fletim_sistemi" title="Ağ işletim sistemi – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%B2%D0%B0_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D1%96%D0%B9%D0%BD%D0%B0_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0" title="Мережева операційна система – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/H%E1%BB%87_%C4%91i%E1%BB%81u_h%C3%A0nh_m%E1%BA%A1ng" title="Hệ điều hành mạng – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" title="网络操作系统 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q282080#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 20 March 2020, at 09:31<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Network_operating_system&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.192","walltime":"0.260","ppvisitednodes":{"value":787,"limit":1000000},"postexpandincludesize":{"value":10920,"limit":2097152},"templateargumentsize":{"value":1968,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":8253,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  239.065      1 -total"," 50.78%  121.409      1 Template:Reflist"," 46.18%  110.412      4 Template:Citation_needed"," 43.61%  104.252      2 Template:Cite_book"," 33.10%   79.137      4 Template:Fix"," 19.95%   47.688      8 Template:Category_handler"," 11.03%   26.373      4 Template:Delink","  2.97%    7.097      4 Template:Fix/category","  1.00%    2.388      1 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.106","limit":"10.000"},"limitreport-memusage":{"value":2241401,"limit":52428800}},"cachereport":{"origin":"mw1375","timestamp":"20200320093152","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Network operating system","url":"https:\/\/en.wikipedia.org\/wiki\/Network_operating_system","sameAs":"http:\/\/www.wikidata.org\/entity\/Q282080","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q282080","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2002-02-25T15:51:15Z","dateModified":"2020-03-20T09:31:50Z","headline":"kind of computer software for running local area networks"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":100,"wgHostname":"mw1333"});});</script></body></html>

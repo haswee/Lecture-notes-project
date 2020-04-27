@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Lexicographic breadth-first search - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XoL1WQpAIC8AACZ2mzQAAAAP","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Lexicographic_breadth-first_search","wgTitle":"Lexicographic breadth-first search","wgCurRevisionId":931357538,"wgRevisionId":931357538,"wgArticleId":22336498,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Graph algorithms","Search algorithms"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Lexicographic_breadth-first_search","wgRelevantArticleId":22336498,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,
+"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q6504471","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready",
+"ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","ext.scribunto.logs","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Lexicographic_breadth-first_search"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Lexicographic_breadth-first_search rootpage-Lexicographic_breadth-first_search skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Lexicographic breadth-first search</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="vertical-navbox nowraplinks hlist" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%"><tbody><tr><th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em"><a href="/wiki/Graph_traversal" title="Graph traversal">Graph</a> and <a href="/wiki/Tree_traversal" title="Tree traversal">tree<br />search algorithms</a></th></tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Alpha%E2%80%93beta_pruning" title="Alpha–beta pruning">α–β</a></li>
+<li><a href="/wiki/A*_search_algorithm" title="A* search algorithm">A*</a></li>
+<li><a href="/wiki/B*" title="B*">B*</a></li>
+<li><a href="/wiki/Backtracking" title="Backtracking">Backtracking</a></li>
+<li><a href="/wiki/Beam_search" title="Beam search">Beam</a></li>
+<li><a href="/wiki/Bellman%E2%80%93Ford_algorithm" title="Bellman–Ford algorithm">Bellman–Ford</a></li>
+<li><a href="/wiki/Best-first_search" title="Best-first search">Best-first</a></li>
+<li><a href="/wiki/Bidirectional_search" title="Bidirectional search">Bidirectional</a></li>
+<li><a href="/wiki/Bor%C5%AFvka%27s_algorithm" title="Borůvka&#39;s algorithm">Borůvka</a></li>
+<li><a href="/wiki/Branch_and_bound" title="Branch and bound">Branch &amp; bound</a></li>
+<li><a href="/wiki/Breadth-first_search" title="Breadth-first search">BFS</a></li>
+<li><a href="/wiki/British_Museum_algorithm" title="British Museum algorithm">British Museum</a></li>
+<li><a href="/wiki/D*" title="D*">D*</a></li>
+<li><a href="/wiki/Depth-first_search" title="Depth-first search">DFS</a></li>
+<li><a href="/wiki/Dijkstra%27s_algorithm" title="Dijkstra&#39;s algorithm">Dijkstra</a></li>
+<li><a href="/wiki/Edmonds%27_algorithm" title="Edmonds&#39; algorithm">Edmonds</a></li>
+<li><a href="/wiki/Floyd%E2%80%93Warshall_algorithm" title="Floyd–Warshall algorithm">Floyd–Warshall</a></li>
+<li><a href="/wiki/Fringe_search" title="Fringe search">Fringe search</a></li>
+<li><a href="/wiki/Hill_climbing" title="Hill climbing">Hill climbing</a></li>
+<li><a href="/wiki/Iterative_deepening_A*" title="Iterative deepening A*">IDA*</a></li>
+<li><a href="/wiki/Iterative_deepening_depth-first_search" title="Iterative deepening depth-first search">Iterative deepening</a></li>
+<li><a href="/wiki/Johnson%27s_algorithm" title="Johnson&#39;s algorithm">Johnson</a></li>
+<li><a href="/wiki/Jump_point_search" title="Jump point search">Jump point</a></li>
+<li><a href="/wiki/Kruskal%27s_algorithm" title="Kruskal&#39;s algorithm">Kruskal</a></li>
+<li><a class="mw-selflink selflink">Lexicographic BFS</a></li>
+<li><a href="/wiki/Lifelong_Planning_A*" title="Lifelong Planning A*">LPA*</a></li>
+<li><a href="/wiki/Prim%27s_algorithm" title="Prim&#39;s algorithm">Prim</a></li>
+<li><a href="/wiki/SMA*" title="SMA*">SMA*</a></li>
+<li><a href="/wiki/Shortest_Path_Faster_Algorithm" title="Shortest Path Faster Algorithm">SPFA</a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+Listings</th></tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><i><a href="/wiki/Category:Graph_algorithms" title="Category:Graph algorithms">Graph algorithms</a></i></li>
+<li><i><a href="/wiki/Category:Search_algorithms" title="Category:Search algorithms">Search algorithms</a></i></li>
+<li><i><a href="/wiki/List_of_algorithms#Graph_algorithms" title="List of algorithms">List of graph algorithms</a></i></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+Related topics</th></tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Dynamic_programming" title="Dynamic programming">Dynamic programming</a></li>
+<li><a href="/wiki/Graph_traversal" title="Graph traversal">Graph traversal</a></li>
+<li><a href="/wiki/Tree_traversal" title="Tree traversal">Tree traversal</a></li>
+<li><a href="/wiki/Search_game" title="Search game">Search games</a></li></ul></td>
+</tr><tr><td style="text-align:right;font-size:115%"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Graph_search_algorithm" title="Template:Graph search algorithm"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Graph_search_algorithm" title="Template talk:Graph search algorithm"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Graph_search_algorithm&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<p>In <a href="/wiki/Computer_science" title="Computer science">computer science</a>, <b>lexicographic breadth-first search</b> or Lex-BFS is a <a href="/wiki/Linear_time" class="mw-redirect" title="Linear time">linear time</a> algorithm for ordering the <a href="/wiki/Vertex_(graph_theory)" title="Vertex (graph theory)">vertices</a> of a <a href="/wiki/Graph_theory" title="Graph theory">graph</a>. The algorithm is different from a <a href="/wiki/Breadth-first_search" title="Breadth-first search">breadth-first search</a>, but it produces an ordering that is consistent with breadth-first search.
+</p><p>The lexicographic breadth-first search algorithm is based on the idea of <a href="/wiki/Partition_refinement" title="Partition refinement">partition refinement</a> and was first developed by Donald J.&#32;Rose,&#32;<a href="/wiki/Robert_Tarjan" title="Robert Tarjan">Robert E. Tarjan</a>,&#32;and&#32;George S. Lueker&#160;(<a href="#CITEREFRoseTarjanLueker1976">1976</a>). A more detailed survey of the topic is presented by <a href="#CITEREFCorneil2004">Corneil (2004)</a>.
+It has been used as a subroutine in other graph algorithms including the recognition of <a href="/wiki/Chordal_graph" title="Chordal graph">chordal graphs</a>, and optimal <a href="/wiki/Graph_coloring" title="Graph coloring">coloring</a> of <a href="/wiki/Distance-hereditary_graph" title="Distance-hereditary graph">distance-hereditary graphs</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Background"><span class="tocnumber">1</span> <span class="toctext">Background</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Algorithm"><span class="tocnumber">2</span> <span class="toctext">Algorithm</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Applications"><span class="tocnumber">3</span> <span class="toctext">Applications</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Chordal_graphs"><span class="tocnumber">3.1</span> <span class="toctext">Chordal graphs</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Graph_coloring"><span class="tocnumber">3.2</span> <span class="toctext">Graph coloring</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Other_applications"><span class="tocnumber">3.3</span> <span class="toctext">Other applications</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#LexBFS_ordering"><span class="tocnumber">4</span> <span class="toctext">LexBFS ordering</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Notes"><span class="tocnumber">5</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Background">Background</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit&amp;section=1" title="Edit section: Background">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="/wiki/Breadth-first_search" title="Breadth-first search">breadth-first search</a> algorithm is commonly defined by the following process:
+</p>
+<ul><li>Initialize a <a href="/wiki/Queue_(abstract_data_type)" title="Queue (abstract data type)">queue</a> of graph vertices, with the starting vertex of the graph as the queue's only element.</li>
+<li>While the queue is non-empty, remove (dequeue) a vertex <span class="texhtml mvar" style="font-style:italic;">v</span> from the queue, and add to the queue (enqueue) all the other vertices that can be reached by an edge from <span class="texhtml mvar" style="font-style:italic;">v</span> that have not already been added in earlier steps.</li></ul>
+<p>However, rather than defining the vertex to choose at each step in an <a href="/wiki/Imperative_programming" title="Imperative programming">imperative</a> way as the one produced by the dequeue operation of a queue, one can define the same sequence of vertices declaratively by the properties of these vertices. That is, a standard breadth-first search is just the result of repeatedly applying this rule:
+</p>
+<ul><li>Repeatedly output a vertex <span class="texhtml mvar" style="font-style:italic;">v</span>, choosing at each step a vertex <span class="texhtml mvar" style="font-style:italic;">v</span> that has not already been chosen and that has a predecessor (a vertex that has an edge to <span class="texhtml mvar" style="font-style:italic;">v</span>) as early in the output as possible.</li></ul>
+<p>In some cases, this ordering of vertices by the output positions of their predecessors may have ties — two different vertices have the same earliest predecessor. In this case, the order in which those two vertices are chosen may be arbitrary. The output of lexicographic breadth-first search differs from a standard breadth-first search in having a consistent rule for breaking such ties. In lexicographic breadth-first search, the output ordering is the order that would be produced by the rule:
+</p>
+<ul><li>Repeatedly output a vertex <span class="texhtml mvar" style="font-style:italic;">v</span>, choosing at each step a vertex <span class="texhtml mvar" style="font-style:italic;">v</span> that has not already been chosen and whose entire set of already-output predecessors is as small as possible in <a href="/wiki/Lexicographic_order" class="mw-redirect" title="Lexicographic order">lexicographic order</a>.</li></ul>
+<p>So, when two vertices <span class="texhtml mvar" style="font-style:italic;">v</span> and <span class="texhtml mvar" style="font-style:italic;">w</span> have the same earliest predecessor, earlier than any other unchosen vertices,
+the standard breadth-first search algorithm will order them arbitrarily. Instead, in this case, the LexBFS algorithm would choose between <span class="texhtml mvar" style="font-style:italic;">v</span> and <span class="texhtml mvar" style="font-style:italic;">w</span> by the output ordering of their second-earliest predecessors.
+If only one of them has a second-earliest predecessor that has already been output, that one is chosen.
+If both <span class="texhtml mvar" style="font-style:italic;">v</span> and <span class="texhtml mvar" style="font-style:italic;">w</span> have the same second-earliest predecessor, then the tie is broken by considering their third-earliest predecessors, and so on.
+</p><p>Applying this rule directly by comparing vertices according to this rule would lead to an inefficient algorithm. Instead, the lexicographic breadth-first search uses a set partitioning data structure in order to produce the same ordering more efficiently, just as a standard breadth-first search uses a queue data structure to produce its ordering efficiently.
+</p>
+<h2><span class="mw-headline" id="Algorithm">Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit&amp;section=2" title="Edit section: Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The lexicographic breadth-first search algorithm replaces the <a href="/wiki/Queue_(data_structure)" class="mw-redirect" title="Queue (data structure)">queue</a> of vertices of a standard breadth-first search with an ordered sequence of sets of vertices. The sets in the sequence form a <a href="/wiki/Partition_(set_theory)" class="mw-redirect" title="Partition (set theory)">partition</a> of the remaining vertices. At each step, a vertex <i>v</i> from the first set in the sequence is removed from that set, and if that removal causes the set to become empty then the set is removed from the sequence. Then, each set in the sequence is replaced by two subsets: the neighbors of <i>v</i> and the non-neighbors of <i>v</i>. The subset of neighbors is placed earlier in the sequence than the subset of non-neighbors. In <a href="/wiki/Pseudocode" title="Pseudocode">pseudocode</a>, the algorithm can be expressed as follows:
+</p>
+<ul><li>Initialize a sequence Σ of sets, to contain a single set containing all vertices.</li>
+<li>Initialize the output sequence of vertices to be empty.</li>
+<li>While Σ is non-empty:
+<ul><li>Find and remove a vertex <i>v</i> from the first set in Σ</li>
+<li>If the first set in Σ is now empty, remove it from Σ</li>
+<li>Add <i>v</i> to the end of the output sequence.</li>
+<li>For each edge <i>v-w</i> such that <i>w</i> still belongs to a set <i>S</i> in Σ:
+<ul><li>If the set <i>S</i> containing <i>w</i> has not yet been replaced while processing <i>v</i>, create a new empty replacement set <i>T</i> and place it prior to <i>S</i> in the sequence; otherwise, let <i>T</i> be the set prior to <i>S</i>.</li>
+<li>Move <i>w</i> from <i>S</i> to <i>T</i>, and if this causes <i>S</i> to become empty remove <i>S</i> from Σ.</li></ul></li></ul></li></ul>
+<p>Each vertex is processed once, each edge is examined only when its two endpoints are processed, and (with an appropriate representation for the sets in Σ that allows items to be moved from one set to another in constant time) each iteration of the inner loop takes only constant time. Therefore, like simpler graph search algorithms such as breadth-first search and <a href="/wiki/Depth_first_search" class="mw-redirect" title="Depth first search">depth first search</a>, this algorithm takes linear time.
+</p><p>The algorithm is called lexicographic breadth-first search because the order it produces is an ordering that could also have been produced by a breadth-first search, and because if the ordering is used to index the rows and columns of an <a href="/wiki/Adjacency_matrix" title="Adjacency matrix">adjacency matrix</a> of a graph then the algorithm <a href="/wiki/Sorting_algorithm" title="Sorting algorithm">sorts</a> the rows and columns into <a href="/wiki/Lexicographical_order" title="Lexicographical order">lexicographical order</a>.
+</p>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit&amp;section=3" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Chordal_graphs">Chordal graphs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit&amp;section=4" title="Edit section: Chordal graphs">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A graph <i>G</i> is defined to be <a href="/wiki/Chordal_graph" title="Chordal graph">chordal</a> if its vertices have a <i>perfect elimination ordering</i>, an ordering such that for any vertex <i>v</i> the neighbors that occur later in the ordering form a clique. In a chordal graph, the reverse of a lexicographic ordering is always a perfect elimination ordering. Therefore, one can test whether a graph is chordal in linear time by the following algorithm:
+</p>
+<ul><li>Use lexicographic breadth-first search to find a lexicographic ordering of <i>G</i></li>
+<li>For each vertex <i>v</i>:
+<ul><li>Let <i>w</i> be the neighbor of <i>v</i> occurring prior to <i>v</i>, as close to <i>v</i> in the sequence as possible
+<ul><li>(Continue to the next vertex <i>v</i> if there is no such <i>w</i>)</li></ul></li>
+<li>If the set of earlier neighbors of <i>v</i> (excluding <i>w</i> itself) is not a subset of the set of earlier neighbors of <i>w</i>, the graph is not chordal</li></ul></li>
+<li>If the loop terminates without showing that the graph is not chordal, then it is chordal.</li></ul>
+<p>This application was the original motivation that led <a href="#CITEREFRoseTarjanLueker1976">Rose, Tarjan &amp; Lueker (1976)</a> to develop the lexicographic breadth first search algorithm.<sup id="cite_ref-FOOTNOTECorneil2004_1-0" class="reference"><a href="#cite_note-FOOTNOTECorneil2004-1">&#91;1&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Graph_coloring">Graph coloring</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit&amp;section=5" title="Edit section: Graph coloring">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A graph <i>G</i> is said to be <i>perfectly orderable</i> if there is a sequence of its vertices with the property that, for any <a href="/wiki/Induced_subgraph" title="Induced subgraph">induced subgraph</a> of <i>G</i>, a <a href="/wiki/Greedy_coloring" title="Greedy coloring">greedy coloring</a> algorithm that colors the vertices in the induced sequence ordering is guaranteed to produce an optimal coloring.
+</p><p>For a chordal graph, a perfect elimination ordering is a perfect ordering: the number of the color used for any vertex is the size of the clique formed by it and its earlier neighbors, so the maximum number of colors used is equal to the size of the largest clique in the graph, and no coloring can use fewer colors. An induced subgraph of a chordal graph is chordal and the induced subsequence of its perfect elimination ordering is a perfect elimination ordering on the subgraph, so chordal graphs are perfectly orderable, and lexicographic breadth-first search can be used to optimally color them.
+</p><p>The same property is true for a larger class of graphs, the <a href="/wiki/Distance-hereditary_graph" title="Distance-hereditary graph">distance-hereditary graphs</a>: distance-hereditary graphs are perfectly orderable, with a perfect ordering given by the reverse of a lexicographic ordering, so lexicographic breadth-first search can be used in conjunction with greedy coloring algorithms to color them optimally in linear time.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Other_applications">Other applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit&amp;section=6" title="Edit section: Other applications">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="#CITEREFBretscherCorneilHabibPaul2008">Bretscher et al. (2008)</a> describe an extension of lexicographic breadth-first search that breaks any additional ties using the <a href="/wiki/Complement_graph" title="Complement graph">complement graph</a> of the input graph. As they show, this can be used to recognize <a href="/wiki/Cograph" title="Cograph">cographs</a> in linear time. <a href="#CITEREFHabibMcConnellPaulViennot2000">Habib et al. (2000)</a> describe additional applications of lexicographic breadth-first search including the recognition of <a href="/wiki/Comparability_graph" title="Comparability graph">comparability graphs</a> and <a href="/wiki/Interval_graph" title="Interval graph">interval graphs</a>.
+</p>
+<h2><span class="mw-headline" id="LexBFS_ordering">LexBFS ordering</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit&amp;section=7" title="Edit section: LexBFS ordering">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>An enumeration of the vertices of a graph is said to be a LexBFS ordering if it is the possible output of the application of LexBFS to this graph.
+</p><p>Let <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle G=(V,E)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>G</mi>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>V</mi>
+        <mo>,</mo>
+        <mi>E</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle G=(V,E)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/644a8d85ee410b6159ca2bdb5dcb9097e2c8f182" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:11.331ex; height:2.843ex;" alt="G=(V,E)"/></span> be a graph  with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>n</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.395ex; height:1.676ex;" alt="n"/></span> vertices.  Recall that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle N(v)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>N</mi>
+        <mo stretchy="false">(</mo>
+        <mi>v</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle N(v)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2846ab53c26104918af619f1d0b77e8f563b77d6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:5.001ex; height:2.843ex;" alt="N(v)"/></span> is the set of neighbors of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle v}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>v</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle v}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e07b00e7fc0847fbd16391c778d65bc25c452597" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.128ex; height:1.676ex;" alt="v"/></span>.
+Let <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \sigma =(v_{1},\dots ,v_{n})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C3;<!-- σ --></mi>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>v</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <msub>
+          <mi>v</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \sigma =(v_{1},\dots ,v_{n})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5fb622aaee5ddab5f4de64b3fc1f39fed8cfcd15" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.944ex; height:2.843ex;" alt="{\displaystyle \sigma =(v_{1},\dots ,v_{n})}"/></span> be an enumeration of the vertices of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle V}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>V</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle V}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/af0f6064540e84211d0ffe4dac72098adfa52845" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.787ex; height:2.176ex;" alt="V"/></span>.
+The enumeration <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \sigma }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C3;<!-- σ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \sigma }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/59f59b7c3e6fdb1d0365a494b81fb9a696138c36" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="\sigma "/></span> is a LexBFS ordering (with source <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle v_{1}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>v</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle v_{1}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/98d33f5d498d528bd8c10edc8ac8c34347f32b3a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.182ex; height:2.009ex;" alt="v_{1}"/></span>) if, for all <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1\leq i&lt;j&lt;k\leq n}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>i</mi>
+        <mo>&lt;</mo>
+        <mi>j</mi>
+        <mo>&lt;</mo>
+        <mi>k</mi>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>n</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1\leq i&lt;j&lt;k\leq n}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a03b36f28b8d63a8fcb381ccb9fa1ac06d1a4c9d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:17.923ex; height:2.509ex;" alt="{\displaystyle 1\leq i&lt;j&lt;k\leq n}"/></span> with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle v_{i}\in N(v_{j})\setminus N(v_{k})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>v</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>N</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>v</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo class="MJX-variant">&#x2216;<!-- ∖ --></mo>
+        <mi>N</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>v</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle v_{i}\in N(v_{j})\setminus N(v_{k})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ccd598c79b4fc68e68a5cd550c37cd28a9e89435" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:18.962ex; height:3.009ex;" alt="{\displaystyle v_{i}\in N(v_{j})\setminus N(v_{k})}"/></span>, there exists <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m&lt;i}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+        <mo>&lt;</mo>
+        <mi>i</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m&lt;i}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a1277d6f707546d4f9407c6049004c5cb08d980e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.941ex; height:2.176ex;" alt="{\displaystyle m&lt;i}"/></span> such that  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle v_{m}\in N(v_{j})\setminus V(v_{k})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>v</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>m</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>N</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>v</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo class="MJX-variant">&#x2216;<!-- ∖ --></mo>
+        <mi>V</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>v</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle v_{m}\in N(v_{j})\setminus V(v_{k})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/517fe5785626158150af6ff93e39bed74baa3ebd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:19.561ex; height:3.009ex;" alt="{\displaystyle v_{m}\in N(v_{j})\setminus V(v_{k})}"/></span>.
+</p>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit&amp;section=8" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-FOOTNOTECorneil2004-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-FOOTNOTECorneil2004_1-0">^</a></b></span> <span class="reference-text"><a href="#CITEREFCorneil2004">Corneil (2004)</a>.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a href="#CITEREFBrandstädtLeSpinrad1999">Brandstädt, Le &amp; Spinrad (1999)</a>, Theorem 5.2.4, p. 71.</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite id="CITEREFBrandstädtLeSpinrad1999" class="citation"><a href="/wiki/Andreas_Brandst%C3%A4dt" title="Andreas Brandstädt">Brandstädt, Andreas</a>; Le, Van Bang; Spinrad, Jeremy (1999), <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/graphclassessurv0000bran"><i>Graph Classes: A Survey</i></a></span>, SIAM Monographs on Discrete Mathematics and Applications, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-89871-432-X" title="Special:BookSources/0-89871-432-X"><bdi>0-89871-432-X</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Graph+Classes%3A+A+Survey&amp;rft.pub=SIAM+Monographs+on+Discrete+Mathematics+and+Applications&amp;rft.date=1999&amp;rft.isbn=0-89871-432-X&amp;rft.aulast=Brandst%C3%A4dt&amp;rft.aufirst=Andreas&amp;rft.au=Le%2C+Van+Bang&amp;rft.au=Spinrad%2C+Jeremy&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fgraphclassessurv0000bran&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALexicographic+breadth-first+search" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style>.</li>
+<li><cite id="CITEREFBretscherCorneilHabibPaul2008" class="citation">Bretscher, Anna; <a href="/wiki/Derek_Corneil" title="Derek Corneil">Corneil, Derek</a>; Habib, Michel; Paul, Christophe (2008), <a rel="nofollow" class="external text" href="http://www.liafa.jussieu.fr/~habib/Documents/cograph.ps">"A simple linear time LexBFS cograph recognition algorithm"</a>, <i><a href="/wiki/SIAM_Journal_on_Discrete_Mathematics" title="SIAM Journal on Discrete Mathematics">SIAM Journal on Discrete Mathematics</a></i>, <b>22</b> (4): 1277–1296, <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.188.5016">10.1.1.188.5016</a></span>, <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1137%2F060664690">10.1137/060664690</a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=SIAM+Journal+on+Discrete+Mathematics&amp;rft.atitle=A+simple+linear+time+LexBFS+cograph+recognition+algorithm&amp;rft.volume=22&amp;rft.issue=4&amp;rft.pages=1277-1296&amp;rft.date=2008&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.188.5016&amp;rft_id=info%3Adoi%2F10.1137%2F060664690&amp;rft.aulast=Bretscher&amp;rft.aufirst=Anna&amp;rft.au=Corneil%2C+Derek&amp;rft.au=Habib%2C+Michel&amp;rft.au=Paul%2C+Christophe&amp;rft_id=http%3A%2F%2Fwww.liafa.jussieu.fr%2F~habib%2FDocuments%2Fcograph.ps&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALexicographic+breadth-first+search" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</li>
+<li><cite id="CITEREFCorneil2004" class="citation"><a href="/wiki/Derek_Corneil" title="Derek Corneil">Corneil, Derek G.</a> (2004), "Lexicographic breadth first search – a survey", <i>Graph-Theoretic Methods in Computer Science: 30th International Workshop, WG 2004, Bad Honnef, Germany, June 21-23, 2004, Revised Papers</i>, Lecture Notes in Computer Science, <b>3353</b>, Springer-Verlag, pp.&#160;1–19, <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2F978-3-540-30559-0_1">10.1007/978-3-540-30559-0_1</a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Lexicographic+breadth+first+search+%E2%80%93+a+survey&amp;rft.btitle=Graph-Theoretic+Methods+in+Computer+Science%3A+30th+International+Workshop%2C+WG+2004%2C+Bad+Honnef%2C+Germany%2C+June+21-23%2C+2004%2C+Revised+Papers&amp;rft.series=Lecture+Notes+in+Computer+Science&amp;rft.pages=1-19&amp;rft.pub=Springer-Verlag&amp;rft.date=2004&amp;rft_id=info%3Adoi%2F10.1007%2F978-3-540-30559-0_1&amp;rft.aulast=Corneil&amp;rft.aufirst=Derek+G.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALexicographic+breadth-first+search" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</li>
+<li><cite id="CITEREFHabibMcConnellPaulViennot2000" class="citation">Habib, Michel; McConnell, Ross; Paul, Christophe; Viennot, Laurent (2000), <a rel="nofollow" class="external text" href="https://web.archive.org/web/20110726091134/http://www.cecm.sfu.ca/~cchauve/MATH445/PROJECTS/MATH445-TCS-234-59.pdf">"Lex-BFS and partition refinement, with applications to transitive orientation, interval graph recognition and consecutive ones testing"</a> <span class="cs1-format">(PDF)</span>, <i>Theoretical Computer Science</i>, <b>234</b> (1–2): 59–84, <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2FS0304-3975%2897%2900241-7">10.1016/S0304-3975(97)00241-7</a>, archived from <a rel="nofollow" class="external text" href="http://www.cecm.sfu.ca/~cchauve/MATH445/PROJECTS/MATH445-TCS-234-59.pdf">the original</a> <span class="cs1-format">(PDF)</span> on 2011-07-26</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Theoretical+Computer+Science&amp;rft.atitle=Lex-BFS+and+partition+refinement%2C+with+applications+to+transitive+orientation%2C+interval+graph+recognition+and+consecutive+ones+testing&amp;rft.volume=234&amp;rft.issue=1%E2%80%932&amp;rft.pages=59-84&amp;rft.date=2000&amp;rft_id=info%3Adoi%2F10.1016%2FS0304-3975%2897%2900241-7&amp;rft.aulast=Habib&amp;rft.aufirst=Michel&amp;rft.au=McConnell%2C+Ross&amp;rft.au=Paul%2C+Christophe&amp;rft.au=Viennot%2C+Laurent&amp;rft_id=http%3A%2F%2Fwww.cecm.sfu.ca%2F~cchauve%2FMATH445%2FPROJECTS%2FMATH445-TCS-234-59.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALexicographic+breadth-first+search" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</li>
+<li><cite id="CITEREFRoseTarjanLueker1976" class="citation">Rose, D. J.; <a href="/wiki/Robert_Tarjan" title="Robert Tarjan">Tarjan, R. E.</a>; Lueker, G. S. (1976), "Algorithmic aspects of vertex elimination on graphs", <i><a href="/wiki/SIAM_Journal_on_Computing" title="SIAM Journal on Computing">SIAM Journal on Computing</a></i>, <b>5</b> (2): 266–283, <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1137%2F0205021">10.1137/0205021</a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=SIAM+Journal+on+Computing&amp;rft.atitle=Algorithmic+aspects+of+vertex+elimination+on+graphs&amp;rft.volume=5&amp;rft.issue=2&amp;rft.pages=266-283&amp;rft.date=1976&amp;rft_id=info%3Adoi%2F10.1137%2F0205021&amp;rft.aulast=Rose&amp;rft.aufirst=D.+J.&amp;rft.au=Tarjan%2C+R.+E.&amp;rft.au=Lueker%2C+G.+S.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALexicographic+breadth-first+search" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1298
+Cached time: 20200331060509
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.228 seconds
+Real time usage: 0.365 seconds
+Preprocessor visited node count: 939/1000000
+Post‐expand include size: 21331/2097152 bytes
+Template argument size: 314/2097152 bytes
+Highest expansion depth: 9/40
+Expensive parser function count: 2/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 11313/5000000 bytes
+Number of Wikibase entities loaded: 2/400
+Lua time usage: 0.125/10.000 seconds
+Lua memory usage: 3.68 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  249.395      1 -total
+ 58.26%  145.295      5 Template:Citation
+ 14.64%   36.499      1 Template:Graph_search_algorithm
+ 13.30%   33.159      1 Template:Sidebar
+ 10.66%   26.576      5 Template:Harvtxt
+  6.02%   15.011      1 Template:Reflist
+  4.44%   11.076      1 Template:Harvs
+  3.88%    9.674      1 Template:Sfnp
+  2.33%    5.799      1 Template:Harvard_citations/core
+  1.37%    3.424     13 Template:Mvar
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:22336498-0!canonical!math=5 and timestamp 20200331060509 and revision id 931357538
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Lexicographic_breadth-first_search&amp;oldid=931357538">https://en.wikipedia.org/w/index.php?title=Lexicographic_breadth-first_search&amp;oldid=931357538</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Graph_algorithms" title="Category:Graph algorithms">Graph algorithms</a></li><li><a href="/wiki/Category:Search_algorithms" title="Category:Search algorithms">Search algorithms</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Lexicographic+breadth-first+search" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Lexicographic+breadth-first+search" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Lexicographic_breadth-first_search" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Lexicographic_breadth-first_search" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Lexicographic_breadth-first_search">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Lexicographic_breadth-first_search" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Lexicographic_breadth-first_search" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;oldid=931357538" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q6504471" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Lexicographic_breadth-first_search&amp;id=931357538&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Lexicographic+breadth-first+search">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Lexicographic+breadth-first+search&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Lexicographic_breadth-first_search&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/LexBFS" title="LexBFS – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B5%D0%BA%D1%81%D0%B8%D0%BA%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D1%88%D0%B8%D1%80%D0%B8%D0%BD%D1%83" title="Лексикографический поиск в ширину – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%9B%D0%B5%D0%BA%D1%81%D0%B8%D0%BA%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%81%D0%BA%D0%B0_%D0%BF%D1%80%D0%B5%D1%82%D1%80%D0%B0%D0%B3%D0%B0_%D1%83_%D1%88%D0%B8%D1%80%D0%B8%D0%BD%D1%83" title="Лексикографска претрага у ширину – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%B2%E0%B9%83%E0%B8%99%E0%B9%81%E0%B8%99%E0%B8%A7%E0%B8%81%E0%B8%A7%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B3%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9E%E0%B8%88%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B8%A1" title="การค้นหาในแนวกว้างตามการเรียงลำดับแบบพจนานุกรม – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q6504471#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 18 December 2019, at 12:39<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Lexicographic_breadth-first_search&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.228","walltime":"0.365","ppvisitednodes":{"value":939,"limit":1000000},"postexpandincludesize":{"value":21331,"limit":2097152},"templateargumentsize":{"value":314,"limit":2097152},"expansiondepth":{"value":9,"limit":40},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11313,"limit":5000000},"entityaccesscount":{"value":2,"limit":400},"timingprofile":["100.00%  249.395      1 -total"," 58.26%  145.295      5 Template:Citation"," 14.64%   36.499      1 Template:Graph_search_algorithm"," 13.30%   33.159      1 Template:Sidebar"," 10.66%   26.576      5 Template:Harvtxt","  6.02%   15.011      1 Template:Reflist","  4.44%   11.076      1 Template:Harvs","  3.88%    9.674      1 Template:Sfnp","  2.33%    5.799      1 Template:Harvard_citations/core","  1.37%    3.424     13 Template:Mvar"]},"scribunto":{"limitreport-timeusage":{"value":"0.125","limit":"10.000"},"limitreport-memusage":{"value":3862341,"limit":52428800},"limitreport-logs":"anchor_id_list = table#1 {\n  [\"CITEREFBrandstädtLeSpinrad1999\"] = 1,\n  [\"CITEREFBretscherCorneilHabibPaul2008\"] = 1,\n  [\"CITEREFCorneil2004\"] = 1,\n  [\"CITEREFHabibMcConnellPaulViennot2000\"] = 1,\n  [\"CITEREFRoseTarjanLueker1976\"] = 1,\n}\ntemplate_list = table#1 {\n  [\"Citation\"] = 5,\n  [\"Graph search algorithm\"] = 1,\n  [\"Harvs\"] = 1,\n  [\"Harvtxt\"] = 5,\n  [\"Mvar\"] = 13,\n  [\"Reflist\"] = 1,\n  [\"Sfnp\"] = 1,\n}\n"},"cachereport":{"origin":"mw1298","timestamp":"20200331060509","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Lexicographic breadth-first search","url":"https:\/\/en.wikipedia.org\/wiki\/Lexicographic_breadth-first_search","sameAs":"http:\/\/www.wikidata.org\/entity\/Q6504471","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q6504471","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2009-04-08T22:53:55Z","dateModified":"2019-12-18T12:39:33Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":104,"wgHostname":"mw1326"});});</script></body></html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8"/>
+<title>Prefix hash tree. All about cryptocurrency - BitcoinWiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Prefix_hash_tree","wgTitle":"Prefix hash tree","wgCurRevisionId":341946,"wgRevisionId":341946,"wgArticleId":270020,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Data storage"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Prefix_hash_tree","wgRelevantArticleId":270020,"wgRequestId":"4647cb38f23bd8c10017115e","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=ext.ApprovedRevs%2CpageNotice%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.27.3"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content="https://en.bitcoinwiki.org/wiki/Prefix_hash_tree"/>
+<meta name="twitter:domain" content="https://twitter.com/realbitcoinwiki"/>
+<meta name="twitter:image:src" content="https://en.bitcoinwiki.org/resources/new_assets/MetaPicWIKI.png"/>
+<meta name="twitter:title" content="Prefix hash tree. All about cryptocurrency - BitcoinWiki"/>
+<meta name="keywords" content="Prefix hash tree, hash, tree, prefix, PHT, DHT, structure, blockchain, function"/>
+<meta name="description" content="Prefix Hash Tree (PHT) is a distributed data structure that enables more sophisticated queries over a distributed hash table (DHT). The prefix hash tree uses the lookup interface of a DHT."/>
+<meta name="twitter:description" content="Prefix Hash Tree (PHT) is a distributed data structure that enables more sophisticated queries over a distributed hash table (DHT). The prefix hash tree uses the lookup interface of a DHT."/>
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/index.php?title=Prefix_hash_tree&amp;action=edit"/>
+<link rel="edit" title="Edit" href="/index.php?title=Prefix_hash_tree&amp;action=edit"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="BitcoinWiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://en.bitcoinwiki.org/api.php?action=rsd"/>
+<link rel="copyright" href="/wiki/BitcoinWiki:Copyrights"/>
+<link rel="alternate" type="application/atom+xml" title="BitcoinWiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.bitcoinwiki.org/wiki/Prefix_hash_tree"/>
+<link rel="amphtml" href="https://en.bitcoinwiki.org/wiki/Amp/Prefix_hash_tree"/>
+<meta property="og:title" content="Prefix hash tree. All about cryptocurrency - BitcoinWiki"/>
+<meta property="og:description" content="Prefix Hash Tree (PHT) is a distributed data structure that enables more sophisticated queries over a distributed hash table (DHT). The prefix hash tree uses the lookup interface of a DHT."/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#204564"/>
+<meta element="meta" name="msapplication-TileColor" content="#204564"/>
+<meta element="meta" name="theme-color" content="#ffffff"/>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTLK3ND');</script>
+<!-- End Google Tag Manager -->
+<!-- Yandex.Metrika counter --> 
+<script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(45963294, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/45963294" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+
+<script type="application/ld+json">
+          {
+             "@context": "http://schema.org",
+             "@type": "Article",
+             "mainEntityOfPage": {
+               "@type": "WebPage",
+               "@id": "https://en.bitcoinwiki.org/wiki/Prefix_hash_tree"
+             },
+             "author": {
+               "@type": "Person",
+               "name": "BeckyMH"
+             },
+             "headline": "Prefix hash tree. All about cryptocurrency - BitcoinWiki",
+             "dateCreated": "2017-12-18T18:43:53+00:00",
+             "datePublished": "2017-12-18T18:43:53+00:00",
+             "dateModified": "2018-10-22T13:37:32+00:00",
+             "discussionUrl": "", 
+             "image": {
+               "@type": "ImageObject",
+               "url": "https://en.bitcoinwiki.org/icon/logo135.png",
+               "height": 135,
+               "width": 135
+             },
+             "publisher": {
+               "@type": "Organization",
+               "name": "BitcoinWiki",
+               "logo": {
+                 "@type": "ImageObject",
+                 "url": "https://en.bitcoinwiki.org/logo-mobile.png",
+                 "height": 60,
+                 "width": 500
+               }
+             },
+             "description": "Prefix Hash Tree (PHT) is a distributed data structure that enables more sophisticated queries over a distributed hash table (DHT). The prefix hash tree uses the lookup interface of a DHT."
+           }
+           </script>
+	<meta property="og:image" content="https://en.bitcoinwiki.org/resources/new_assets/MetaPicWIKI.png"/>
+
+	<meta property="og:url" content="https://en.bitcoinwiki.org/wiki/Prefix_hash_tree"/>
+
+<link rel="alternate" hreflang="x-default" href="https://en.bitcoinwiki.org/wiki/Prefix_hash_tree"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Prefix_hash_tree rootpage-Prefix_hash_tree skin-vector action-view approvedRevs-approved">
+
+        		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main" data-page-type="common">
+			<a id="top"></a>
+
+						<div class="mw-indicators">
+</div>
+            			<h1 id="firstHeading" class="firstHeading" lang="en">Prefix hash tree</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From BitcoinWiki</div>
+								<div id="contentSub"><span class="approvedAndLatestMsg">This is the approved revision of this page, as well as being the most recent.</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="top-notice-ns"><div class="top-social">
+  <div class="share-buttons">
+<p><i>Enjoyed the article? Share:</i>
+</p>
+  <div class="wiki-share hide-mobile">
+<div class="likely likely likely-small" data-via="bitcoinwiki_org">
+  <div class="twitter"></div>
+  <div class="facebook"></div>
+  <div class="telegram"></div>
+  <div class="whatsapp"></div>
+</div>
+</div>
+ </div>
+</div>
+</div><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<p>A <b>prefix hash tree</b> (PHT) is a distributed <a href="/index.php?title=Data_structure&amp;action=edit&amp;redlink=1" class="new" title="Data structure (page does not exist)">data structure</a> that enables more sophisticated queries over a <a href="/wiki/Distributed_hash_table" title="Distributed hash table">distributed hash table</a> (DHT). The prefix hash tree uses the lookup interface of a DHT to construct a <a href="/index.php?title=Trie&amp;action=edit&amp;redlink=1" class="new" title="Trie (page does not exist)">trie</a>-based data structure that is both efficient (updates are doubly logarithmic in the size of the domain being indexed), and resilient (the failure of any given node in a prefix hash tree does not affect the availability of data stored at other nodes).
+</p>
+<h2>
+<span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Prefix_hash_tree&amp;action=edit&amp;section=1" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span>
+</h2>
+<ul>
+<li>
+<a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="https://www.eecs.berkeley.edu/~sylvia/papers/pht.pdf">https://www.eecs.berkeley.edu/~sylvia/papers/pht.pdf</a> <i>- Prefix Hash Tree: An Indexing Data Structure over Distributed Hash Tables</i>
+</li>
+<li>
+<a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="http://pier.cs.berkeley.edu">http://pier.cs.berkeley.edu</a> <i>- PHT was developed as part of work on the PIER project.</i>
+</li>
+<li>
+<a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="http://www.tecnohobby.net/ppal/index.php/programacion/java/35-solucionador-de-puzzles-usando-arboles-trie-trie-trees-o-prefix-trees">http://www.tecnohobby.net/ppal/index.php/programacion/java/35-solucionador-de-puzzles-usando-arboles-trie-trie-trees-o-prefix-trees</a> <i>- Java implementation for searching words in a puzzle using a prefix tree.</i>
+</li>
+</ul>
+<h2>
+<span class="mw-headline" id="See_also">See Also on BitcoinWiki</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Prefix_hash_tree&amp;action=edit&amp;section=2" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span>
+</h2>
+<ul>
+<li><a href="/index.php?title=Prefix_tree&amp;action=edit&amp;redlink=1" class="new" title="Prefix tree (page does not exist)">Prefix tree</a></li>
+<li><a href="/wiki/P-Grid" title="P-Grid">P-Grid</a></li>
+</ul>
+<h2>
+<span class="mw-headline" id="Source">Source</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Prefix_hash_tree&amp;action=edit&amp;section=3" title="Edit section: Source">edit</a><span class="mw-editsection-bracket">]</span></span>
+</h2>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="http://wikipedia.org/">http://wikipedia.org/</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20200331103024
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.000 seconds
+Real time usage: 0.002 seconds
+Preprocessor visited node count: 19/1000000
+Preprocessor generated node count: 72/1000000
+Post&#8208;expand include size: 26/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 - -total
+-->
+</body></html>
+<div id="bottom-notice-ns"><div class="top-social">
+  <div class="share-buttons">
+  <div class="wiki-share hide-mobile">
+<div class="likely likely likely-small" data-via="bitcoinwiki_org">
+  <div class="twitter"></div>
+  <div class="facebook"></div>
+  <div class="telegram"></div>
+  <div class="whatsapp"></div>
+</div>
+</div>
+ </div>
+</div>
+<p><br />
+<br />
+</p></div></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.bitcoinwiki.org/index.php?title=Prefix_hash_tree&amp;oldid=341946">https://en.bitcoinwiki.org/index.php?title=Prefix_hash_tree&amp;oldid=341946</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Data_storage" title="Category:Data storage">Data storage</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/index.php?title=Special:CreateAccount&amp;returnto=Prefix+hash+tree" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Prefix+hash+tree" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Prefix_hash_tree"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+															<li  id="ca-votes"><span><a href="/wiki/Special:Votes" >Votes</a></span></li>
+															<li  id="ca-rating"><span><a href="/wiki/Special:Ratings" >Rating</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/index.php?title=Talk:Prefix_hash_tree&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Discussion</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Prefix_hash_tree" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="/index.php?title=Prefix_hash_tree&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/index.php?title=Prefix_hash_tree&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+															<li id="ca-0" class="collapsible"><span><a href="/wiki/Special:WantedPages" >Create</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search" title="Search BitcoinWiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-wantedpage"><a href="/wiki/Special:WantedPages" title="Wanted pages">Wanted pages</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" target="_blank" title="The place to find out">Help</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-Social' aria-labelledby='p-Social-label'>
+			<h3 id='p-Social-label'>Social</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-Twitter"><a href="https://twitter.com/realbitcoinwiki" rel="nofollow" target="_blank">Twitter</a></li><li id="n-Telegram-Chat"><a href="https://t.me/bitcoinwikiorg" rel="nofollow" target="_blank">Telegram Chat</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Prefix_hash_tree" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Prefix_hash_tree" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/index.php?title=Prefix_hash_tree&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/index.php?title=Prefix_hash_tree&amp;oldid=341946" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/index.php?title=Prefix_hash_tree&amp;action=info" title="More information about this page">Page information</a></li>					</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 13 April 2018, at 11:28.</li>
+											<li id="footer-info-project-since">BitcoinWiki project since 2014</li>
+											<li id="footer-info-copyright">Content is available under <a href="/wiki/BitcoinWiki:Copyrights" title="BitcoinWiki:Copyrights">BY-SA</a> unless otherwise noted.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/wiki/BitcoinWiki:Privacy_policy" title="BitcoinWiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/BitcoinWiki:About" title="BitcoinWiki:About">About BitcoinWiki</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/BitcoinWiki:General_disclaimer" title="BitcoinWiki:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" alt="BY-SA" width="88" height="31"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.state({"user":"ready","user.groups":"ready"});mw.loader.load(["mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.CategorySuggest","ext.eventLogging.subscriber","ext.moderation.notify","ext.moderation.notify.desktop","ext.WidgetVote.assets","ext.popups.desktop"]);});</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTLK3ND"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":42});});</script>
+	</body>
+</html>
