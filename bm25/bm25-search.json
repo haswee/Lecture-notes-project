@@ -1,0 +1,14 @@
+{
+  "index": "ap89.idx", 
+  "b": 0.75, 
+  "verbose": true, 
+  "requested": 10, 
+  "K": 1.2, 
+  "casefold": true, 
+  "queries": [
+    {
+      "text": "#combine(#bm25(f-script) #bm25(programming) #bm25(language) #bm25(references))", 
+      "number": "bm25-combine"
+    }
+  ]
+}
