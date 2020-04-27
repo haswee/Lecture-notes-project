@@ -28,10 +28,12 @@ For tf-idf, the top-20 files of the corpus and google results are written in `co
 > cd tf-idf
 
 > python tf-idf.py <directory where corpus.txt is located>
+
 ex: python tf-idf.py "./F/" 
 
 Once the corpus is vectorised, queries can be made using the `query.py`or using the search function of query.py.
 > python query.py <query>
+
 ex: python query.py "F-script programming language"
 
 ## Method-4: Using GloVe (Cosine Similarity) ##
@@ -39,8 +41,10 @@ For glove, the top-40 files of the corpus and google results are written in `cor
 > cd glove
 
 > python glove_vectorization.py <directory where corpus.txt is located>
+
 ex: python glove_vectorization.py "./F/" 
 
 Once the corpus is vectorised, queries can be made using the `query.py`or using the search function of glove_query.py.
 > python glove_query.py <query>
+
 ex: python glove_query.py "F-script programming language"
