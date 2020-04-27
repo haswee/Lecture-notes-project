@@ -17,3 +17,8 @@ Google search is used to search query, and the links(html and pdf) are downloade
 > cd google
   
 > python search.py
+### BM25+New Corpus ###
+`bm25-bash.sh` requires various files and their working is explained in the file itself. After running the file, this returns results.txt which contains the most relevant paraghraphs.
+> cd bm25
+
+> bash bm25-bash.sh
