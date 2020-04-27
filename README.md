@@ -37,10 +37,10 @@ Once the corpus is vectorised, queries can be made using the `query.py`or using 
 ex: python query.py "F-script programming language"
 
 ## Method-4: Using GloVe (Cosine Similarity) ##
-For glove, the top-40 files of the corpus and google results are written in `corpus.txt`. 
+For glove, the top-40 files of the corpus and google results are written in `corpus.txt`. Install GloVe and run it on the corpus file created, place the output `vectors.txt` in the same directory as the corpus file.
 > cd glove
 
-> python glove_vectorization.py <directory where corpus.txt is located>
+> python glove_vectorization.py <directory where corpus.txt and vectors.txt is located>
 
 ex: python glove_vectorization.py "./F/" 
 
